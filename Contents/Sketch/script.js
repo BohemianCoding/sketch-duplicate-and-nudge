@@ -1,20 +1,13 @@
 function duplicateAndNudge(context, dX, dY) {
-  var api = context.api();
-  var selection = api.selected_document().selection;
-  var firstTime = true;
-  selection.iterate(function(layer) {
+  var sketch = context.api();
+  var selection = sketch.selected_document().selection;
+  selection.iterateAndClear(function(layer) {
     var copy = layer.duplicate();
     var f = copy.frame;
     f.x += dX;
     f.y += dY;
     copy.frame = f;
-
-    if (firstTime) {
-      copy.select();
-      firstTime = false;
-    } else {
-      copy.add_to_selection();
-    }
+    copy.add_to_selection();
   });
 }
 
