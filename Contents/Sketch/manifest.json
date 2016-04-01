@@ -1,0 +1,18 @@
+{
+  "author" : "Ale Muñoz",
+  "commands" : [
+    {
+      "script" : "script.cocoascript",
+      "name" : "Down 10px",
+      "handlers" : {
+        "run": "onDown10"
+        },
+      "identifier" : "down10"
+    }
+  ],
+  "identifier" : "com.bomberstudios.duplicate-and-nudge",
+  "version" : "2.0",
+  "description" : "A port to Sketch.app of Photoshop's Duplicate and Nudge feature",
+  "authorEmail" : "ale@sketchapp.com",
+  "name" : "Duplicate And Nudge"
+}
