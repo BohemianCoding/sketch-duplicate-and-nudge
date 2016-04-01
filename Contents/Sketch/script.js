@@ -11,6 +11,7 @@ function duplicateAndNudge(context, dX, dY) {
 
     if (firstTime) {
       copy.select();
+      firstTime = false;
     } else {
       copy.add_to_selection();
     }
