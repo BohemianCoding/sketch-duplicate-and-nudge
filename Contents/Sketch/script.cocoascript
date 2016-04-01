@@ -1,19 +1,20 @@
 function duplicateAndNudge(context, dX, dY) {
-  var selection = context.selection;
-  for(var i=0; i < [selection length]; i++){
-    var s = selection[i]
-    var copy = [s duplicate]
-    var frame = [copy frame]
+  var api = context.api();
+  var selection = api.selected_document().selection;
+  var firstTime = true;
+  selection.iterate(function(layer) {
+    var copy = layer.duplicate();
+    var f = copy.frame;
+    f.x += dX;
+    f.y += dY;
+    copy.frame = f;
 
-    [frame setX:([frame x] + dX)]
-    [frame setY:([frame y] + dY)]
-
-    if (i==0) {
-      [copy select:true byExpandingSelection:false]
+    if (firstTime) {
+      copy.select();
     } else {
-      [copy select:true byExpandingSelection:true]
+      copy.add_to_selection();
     }
-  }
+  });
 }
 
 
