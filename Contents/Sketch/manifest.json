@@ -4,12 +4,67 @@
     {
       "script" : "script.cocoascript",
       "name" : "Down 10px",
+      "shortcut" : "alt shift ↓",
       "handlers" : {
         "run": "onDown10"
         },
-      "identifier" : "down10"
-    }
-  ],
+    },
+    {
+      "script" : "script.cocoascript",
+      "name" : "Down 1px",
+      "shortcut" : "alt ↓",
+      "handlers" : {
+        "run": "onDown1"
+        },
+    },
+    {
+      "script" : "script.cocoascript",
+      "name" : "Up 10px",
+      "shortcut" : "alt shift ↑",
+      "handlers" : {
+        "run": "onUp10"
+        },
+    },
+    {
+      "script" : "script.cocoascript",
+      "name" : "Up 1px",
+      "shortcut" : "alt ↑",
+      "handlers" : {
+        "run": "onUp1"
+        },
+    },
+    {
+      "script" : "script.cocoascript",
+      "name" : "Left 10px",
+      "shortcut" : "alt shift ←",
+      "handlers" : {
+        "run": "onLeft10"
+        },
+    },
+    {
+      "script" : "script.cocoascript",
+      "name" : "Left 1px",
+      "shortcut" : "alt ←",
+      "handlers" : {
+        "run": "onLeft1"
+        },
+    },
+    {
+      "script" : "script.cocoascript",
+      "name" : "Right 10px",
+      "shortcut" : "alt shift →",
+      "handlers" : {
+        "run": "onRight10"
+        },
+    },
+    {
+      "script" : "script.cocoascript",
+      "name" : "Right 1px",
+      "shortcut" : "alt →",
+      "handlers" : {
+        "run": "onRight1"
+        },
+    },  ],
   "identifier" : "com.bomberstudios.duplicate-and-nudge",
   "version" : "2.0",
   "description" : "A port to Sketch.app of Photoshop's Duplicate and Nudge feature",

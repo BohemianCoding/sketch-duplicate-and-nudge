@@ -1,11 +1,12 @@
-function onDown10(context) {
+function duplicateAndNudge(context, dX, dY) {
   var selection = context.selection;
   for(var i=0; i < [selection length]; i++){
     var s = selection[i]
     var copy = [s duplicate]
     var frame = [copy frame]
 
-    [frame setY:([frame y] + 10)]
+    [frame setX:([frame x] + dX)]
+    [frame setY:([frame y] + dY)]
 
     if (i==0) {
       [copy select:true byExpandingSelection:false]
@@ -13,4 +14,37 @@ function onDown10(context) {
       [copy select:true byExpandingSelection:true]
     }
   }
+}
+
+
+function onDown10(context) {
+  duplicateAndNudge(context, 0, 10);
+}
+
+function onDown1(context) {
+  duplicateAndNudge(context, 0, 1);
+}
+
+function onUp10(context) {
+  duplicateAndNudge(context, 0, -10);
+}
+
+function onUp1(context) {
+  duplicateAndNudge(context, 0, -1);
+}
+
+function onLeft10(context) {
+  duplicateAndNudge(context, -10, 0);
+}
+
+function onLeft1(context) {
+  duplicateAndNudge(context, -1, 0);
+}
+
+function onRight10(context) {
+  duplicateAndNudge(context, 10, 0);
+}
+
+function onRight1(context) {
+  duplicateAndNudge(context, 1, 0);
 }
